@@ -15,9 +15,9 @@ In the .\bin\config -- folder update the path for server.properties with log.dir
 
 .\bin\windows\kafka-server-start.bat .\config\server.properties
 
-kafka-topics.bat --create --bootstrap-server localhost:9092 --replication-factor 1 --partition 1 --topic test
+.\bin\windows\kafka-topics.bat --create --bootstrap-server localhost:9092 --replication-factor 1 --partition 1 --topic test
 
-kafka-console-producer.bat --broker-list localhost:9092 --topic test
+.\bin\windows\kafka-console-producer.bat --broker-list localhost:9092 --topic test
 -------------------------------------------------------------------------------------------------------
 Sample Data:
 
@@ -26,7 +26,7 @@ Sample Data:
 {"Name: "Ronald", "Age":"17", "Gender":"Male"}
 ---------------------------------------------------------------------------------------------------------
 
-kafka-console-consumer.bat --topic test --bootstrap-server localhost:9092 --from-beginning
+.\bin\windows\kafka-console-consumer.bat --topic test --bootstrap-server localhost:9092 --from-beginning
 
 .\bin\windows\zookeeper-server-stop.bat .\config\zookeeper.properties
 
