@@ -11,9 +11,13 @@ Apache Kafka official website: https://kafka.apache.org/downloads
 In the .\bin\config -- folder update the path for zookeeper.properties with dataDir=C:/kafka/zookeeper-data
 In the .\bin\config -- folder update the path for server.properties with log.dirs=C:/kafka/kafka-logs
 
+NOTE: clear the Logs Folder if required in starting if facing any issues in running all the below steps:
+1. run in terminal:
 .\bin\windows\zookeeper-server-start.bat .\config\zookeeper.properties
-
+2. run in new terminal:
 .\bin\windows\kafka-server-start.bat .\config\server.properties
+3. run the Java Application
+
 
 .\bin\windows\kafka-topics.bat --create --bootstrap-server localhost:9092 --replication-factor 1 --partition 1 --topic test
 
